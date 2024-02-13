@@ -1,0 +1,69 @@
+@import "./index.scss";
+
+$navigator-height: 85px;
+
+.navigator {
+  width: 100vw;
+  height: fit-content;
+  background-color: $dark-background;
+  color: $dark-text;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.links {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.links a {
+  width: 40px;
+  height: 100%;
+  margin-right: 10px;
+  color: $dark-text;
+  text-decoration: none;
+  opacity: 20%;
+}
+
+.really-you {
+  margin-left: 40px;
+  opacity: 10% !important;
+  font-size: 10px;
+}
+
+.main-title-nav {
+  flex-shrink: 0;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 60%;
+  padding: 12px !important;
+  width: fit-content !important;
+  font-weight: 350 !important;
+  color: white;
+  text-decoration: none;
+}
+.main-title-nav::before {
+  content: "i love you";
+  position: absolute;
+  font-size: 1rem;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 800px;
+  // color: $dark-primary;
+  background: linear-gradient(0deg, $dark-primary 50%, rgba(0,0,0,0) 100%);
+  opacity: 40%;
+  z-index: 2222;
+  transform: scale(2) scaleY(1);
+  translate: 0 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-title-nav div {
+  padding-left: 12px !important;
+}

@@ -1,4 +1,309 @@
-body {
-  background-color: black;
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Noto+Serif+Display:ital,wght@1,200&family=Poppins&display=swap');
+
+
+$light-text: hsl(240, 30%, 9%);
+$light-background: hsl(276, 33%, 97%);
+$light-primary: hsl(254, 55%, 49%);
+$light-secondary: hsl(264, 25%, 74%);
+$light-accent: hsl(100, 29%, 50%);
+
+$dark-text: hsl(240, 29%, 91%);
+$dark-background: hsl(276, 33%, 3%);
+$dark-primary: hsl(254, 55%, 51%);
+$dark-secondary: hsl(264, 25%, 26%);
+$dark-accent: hsl(100, 29%, 50%);
+
+@keyframes load-animation {
+  0% { opacity: 0%; transform: translateY(-200px); }
+  100% { opacity: 100%; transform: translateY(0px); }
 }
+
+
+@keyframes main-page-exit {
+  0% {
+    translate: 0px 0px;
+    transform: scale(1);
+  }
+  25% {
+    translate: -50px 0px;
+    transform: scale(0.9);
+  }
+  30% {
+    translate: -50px 0px;
+    transform: scale(0.9);
+  }
+  45% {
+    translate: -50px 90px;
+    transform: scale(0.9);
+    opacity: 0%;
+  }
+  100% {
+    translate: -50px 0px;
+    transform: scale(0.9);
+    opacity: 0%;
+  }
+}
+
+.page-hidden {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  animation: main-page-exit 1.5s forwards !important;
+}
+
+.page-view {
+  position: relative;
+  z-index: 1;
+  animation: load-animation 0.8s forwards !important;
+}
+
+button {
+  background-color: $light-primary;
+  color: $light-background;
+  padding: 8px 12px;
+  font-family: 'El Missiri';
+  border-radius: 12px;
+  font-size: 1.2rem;
+  
+  border: 2px solid $light-primary;
+  
+  transition: all 0.4s;
+  
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: center;
+}
+
+.material-symbols-outlined {
+  align-self: center;
+  justify-self: center;
+  font-size: inherit !important;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid $light-primary;
+  background-color: lighten($light-primary, 10);
+}
+
+body {
+  margin: 0;
+  font-weight: 400;
+
+  font-family: 'Noto Serif Display';
+  width: 100vw;
+
+  overflow-x: clip;
+  
+  background-color: $light-background;
+  color: $light-text;
+}
+
+.App, #root {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  padding: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Noto Serif Display', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+p {
+  font-family: 'El Messiri';
+  font-size: 1rem;
+}
+
+.main-title-small {
+  animation: none !important;
+  font-size: 1rem !important;
+}
+
+.main-title {
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 700px;
+}
+
+.main-title-text div {
+  width: fit-content;
+}
+
+.main-title-text .l2 {
+  font-size: 50%;
+  font-weight: 350;
+  padding-left: 10%;
+}
+
+.main-title-text .l3 {
+  padding-left: 16%;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 1.753rem; /* 48.8px */}
+
+h2 {font-size: 0.9442rem; /* 39.04px */}
+
+h3 {font-size: 0.854rem; /* 31.2px */}
+
+h4 {font-size: 0.563rem; /* 24.96px */}
+
+h5 {font-size: 0.250rem; /* 20px */}
+
+small {font-size: 0.400rem; /* 12.8px */}
+
+$grain-scale: 1.2;
+
+@keyframes animateGrain{
+  0%, 100% { transform:translate(0, 0) }
+  10%{
+    transform:translate(-5%,-10%)
+  }
+  20%{
+    transform:translate(-15%,-20%)
+  }
+  30%{
+    transform:translate(-5%,-10%)
+  }
+  40%{
+    transform:translate(-15%,-20%)
+  }
+
+  50%{
+    transform:translate(-5%,-10%)
+  }
+  60%{
+    transform:translate(-15%,-20%)
+  }
+  70%{
+    transform:translate(-5%,-10%)
+  }
+  80%{
+    transform:translate(-15%,-20%)
+  }
+  90%{
+    transform:translate(-5%,-10%)
+  }
+  100%{
+    transform:translate(-15%,-20%)
+  }
+}
+
+.overlay-grain {
+  // animation: animateGrain 1s;
+  // animation-timing-function: step-end;
+  // animation-iteration-count: infinite;
+  // z-index: -1;
+  // width: 200vh;
+  // height: 200vh;
+  // opacity: 100%;
+  // position: fixed;
+  // mix-blend-mode: overlay;
+  
+  // background-image: url("../../public/1k_Dissolve_Noise_Texture.png");
+  
+  content:"";
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  height: 300%;
+  width: 300%;
+  position: fixed;
+  opacity:0.06;
+  z-index: 900;
+  animation: animateGrain 8s steps(10) infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+.img-cen {
+  max-width: 100%;
+  z-index: 5 !important;
+}
+.img-bord {
+  border-radius: 8px;
+  border: 2px solid $light-primary;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 0px 8px rgba($light-primary, 0.3));
+}
+
+.grid-2x1 {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.started-page * {
+  z-index: 20;
+  position: relative;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/693/323/small/abstract-gradient-pink-purple-stripes-on-purple-background.jpg");
+  left: 0;
+  top: 0;
+  filter: blur(80px);
+  z-index: 0 !important;
+  opacity: 25%;
+  position: fixed;
+  pointer-events: none;
+}
+
+.page-fill {
+  height: 100%;
+}
+
+.particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: -1;
+}
+
+.particle-page {
+  padding: 40px;
+}
+
+.particle-page h1 {
+  color: $dark-text;
+  opacity: 30%;
+  font-weight: 400;
+  text-shadow: $dark-background 1px 0 10px;
+}
+
+.particle-page p {
+  color: $dark-text;
+  opacity: 15%;
+  font-weight: 200;
+}
+

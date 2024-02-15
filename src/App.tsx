@@ -15,9 +15,10 @@ class App extends React.Component {
   
   GetPageByURL(URL: string) {
     switch (URL) {
-      case 'home':
       case '':
+      case '/':
       case '/home':
+      case 'home':
         return <HomePage Navigate={this.navigateToPage.bind(this)}/>
         
       case 'how-it-started':

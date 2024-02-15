@@ -7,6 +7,7 @@ import HowItStartedPage from "./HowItStarted.tsx";
 import Particle from "./Particle.tsx";
 
 export type NavigateFunc = (url: string) => void;
+const GH_PAGE = window.location.pathname.indexOf("vaness-src") !== -1;
 
 class App extends React.Component {
   state: Readonly<{ OldPage?: ReactElement, CurrentPage?: ReactElement, Navigating: boolean }> = {
@@ -14,11 +15,14 @@ class App extends React.Component {
   };
   
   GetPageByURL(URL: string) {
+    URL = URL.replace("/vaness-src", "");
+    
     switch (URL) {
       case '':
       case '/':
       case '/home':
       case 'home':
+      case '/index.html':
         return <HomePage Navigate={this.navigateToPage.bind(this)}/>
         
       case 'how-it-started':
@@ -66,6 +70,13 @@ class App extends React.Component {
 
   navigationQueue: string[] = [];
   navigateToPage(pageUrl: string, skipHistory: boolean = false) {
+    if (GH_PAGE) {
+      if (pageUrl.startsWith('/'))
+        pageUrl = `/vaness-src${pageUrl}`;
+      else
+        pageUrl = `/vaness-src/${pageUrl}`;
+    }
+    
     if (this.state.Navigating === true) {
       console.log("Navigating!");
       this.navigationQueue.push("./" + pageUrl);

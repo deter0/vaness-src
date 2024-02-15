@@ -27644,6 +27644,28 @@ class ParticlePage extends (0, _reactDefault.default).Component {
                     fileName: "src/Particle.tsx",
                     lineNumber: 139,
                     columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/Particle.tsx",
+                    lineNumber: 140,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/Particle.tsx",
+                    lineNumber: 141,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                    fileName: "src/Particle.tsx",
+                    lineNumber: 142,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "i love love love you (more)"
+                }, void 0, false, {
+                    fileName: "src/Particle.tsx",
+                    lineNumber: 143,
+                    columnNumber: 7
                 }, this)
             ]
         }, void 0, true, {

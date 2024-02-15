@@ -134,7 +134,7 @@ p {
 
 .main-title {
   flex-direction: column;
-  max-width: 80vw;
+  max-width: 365px;
   display: flex;
 }
 
@@ -270,6 +270,11 @@ small {
   display: grid;
 }
 
+.started-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .started-page * {
   z-index: 20;
   position: relative;
@@ -303,6 +308,8 @@ small {
 }
 
 .particle-page {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 40px;
 }
 
@@ -439,7 +446,7 @@ p {
 
 .main-title {
   flex-direction: column;
-  max-width: 80vw;
+  max-width: 365px;
   display: flex;
 }
 
@@ -575,6 +582,11 @@ small {
   display: grid;
 }
 
+.started-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .started-page * {
   z-index: 20;
   position: relative;
@@ -608,6 +620,8 @@ small {
 }
 
 .particle-page {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 40px;
 }
 
@@ -857,7 +871,7 @@ p {
 
 .main-title {
   flex-direction: column;
-  max-width: 80vw;
+  max-width: 365px;
   display: flex;
 }
 
@@ -947,6 +961,11 @@ small {
   display: grid;
 }
 
+.started-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .started-page * {
   z-index: 20;
   position: relative;
@@ -980,6 +999,8 @@ small {
 }
 
 .particle-page {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 40px;
 }
 
@@ -1067,7 +1088,6 @@ small {
   box-sizing: border-box;
   justify-content: space-around;
   align-items: center;
-  padding: 4px;
   display: flex;
   height: calc(100vh - 85px) !important;
 }
@@ -1108,11 +1128,16 @@ small {
     margin-bottom: 20px;
     font-size: 1rem;
   }
+
+  .main-title {
+    padding: 0 20px;
+  }
 }
 
 .home-page-messages {
+  width: 100%;
   max-width: 600px;
-  max-height: 800px;
+  height: 80%;
 }
 
 .title-date-range {
@@ -1263,7 +1288,7 @@ p {
 
 .main-title {
   flex-direction: column;
-  max-width: 80vw;
+  max-width: 365px;
   display: flex;
 }
 
@@ -1399,6 +1424,11 @@ small {
   display: grid;
 }
 
+.started-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .started-page * {
   z-index: 20;
   position: relative;
@@ -1432,6 +1462,8 @@ small {
 }
 
 .particle-page {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 40px;
 }
 

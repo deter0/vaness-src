@@ -14,7 +14,7 @@ class Navigator extends React.Component<{Navigate: NavigateFunc }> {
   }
   render() {
     return <div className="navigator">
-      <a href="/home" className="main-title-nav main-title-small main-title-text">
+      <a href="./index.html" className="main-title-nav main-title-small main-title-text">
         <div className="l1">Vanessa<br/></div>
         <div className="l2">&<br/></div>
         <div className="l3">Ibraheem<br/></div>

@@ -68,7 +68,7 @@ class App extends React.Component {
   navigateToPage(pageUrl: string, skipHistory: boolean = false) {
     if (this.state.Navigating === true) {
       console.log("Navigating!");
-      this.navigationQueue.push(pageUrl);
+      this.navigationQueue.push("./" + pageUrl);
       return;
     } else {
       let NewPage: ReactElement|null = this.GetPageByURL(pageUrl);
